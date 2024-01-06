@@ -20,5 +20,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("mainpg/", include("mainpg.urls")),
+    path("", include("mainpg.urls")),
+    
+    # Add the pages urls above this line
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
